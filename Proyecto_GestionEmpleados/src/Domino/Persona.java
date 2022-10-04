@@ -11,7 +11,7 @@ import Principal.principal;
  *
  * crear una clase  hija = empleado, numero ss y que tenga un metodo imprimir pot pantalla
  */
-public final class Persona  {
+public  class Persona  {
     private String nombre,apellido;
     private int idpersona;
     //contador de persona

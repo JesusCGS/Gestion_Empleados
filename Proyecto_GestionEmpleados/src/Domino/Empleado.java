@@ -11,9 +11,14 @@ package Domino;
  */
 public class Empleado extends Persona{
 
-    @Override
-    public  void imprimir(){
-        System.out.println("imprimiendo desde la clase padre ...");
+    public Empleado(String nombre, String apellido) {
+        super(nombre, apellido);
     }
+
+   /* @Override
+    public final void imprimir(){
+        System.out.println("imprimiendo desde la clase padre ...");
+    }*/
+    
     
 }
