@@ -39,6 +39,47 @@ public class principal {
             System.out.println(formulario[i]);
         }
         
+        System.out.println("\n\n====================\n\n");
+        System.out.println("matriz de personas");
+        matriz_de_personas();
+        
+        
+        
+    }
+    
+    
+    public static void matriz_de_personas(){
+    
+       
+        Persona e1 = new Empleado("Loken","swift");
+        Persona e2 = new Empleado("LUIS","morado");
+        Persona e3 = new Empleado("Loken","swift");
+        Persona e4 = new Empleado("LUIS","morado");
+        
+        Persona empleado[]= {e1,e2};
+        
+        Persona matri[][]=new Persona [2][2];
+        matri[0][0]=e1;
+        matri[0][1]=e2;
+        matri[1][0]=e3;
+        matri[1][1]=e4;
+        
+      /* for (int i = 0; i < empleado.length; i++) {
+          
+        }*/
+        for (int i = 0; i < matri.length; i++) {
+            if (i==0) System.out.println("socios: ");
+            else System.out.println("Directores: ");
+            for (int j = 0; j < matri[i].length; j++) {
+                System.out.println(matri[i][j]);
+            }
+                
+        }
+       
+        
+        
+        
+        
         
     }
     
