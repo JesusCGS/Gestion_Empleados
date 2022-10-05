@@ -42,6 +42,12 @@ public class principal {
         System.out.println("\n\n====================\n\n");
         System.out.println("matriz de personas");
         matriz_de_personas();
+        System.out.println("=====================");
+        //metodo de imprimir variables
+        System.out.println("primera llamada");
+        imprimir_metodo_variable(1,2,3);
+        System.out.println("segunda llamada");
+        imprimir_metodo_variable(253,1);
         
         
         
@@ -92,5 +98,13 @@ public class principal {
             System.out.println("lista"+i+" = "+lista[i]);
         }
     }
+    public static void imprimir_metodo_variable(int...numeros){
+        for (int i = 0; i < numeros.length; i++) {
+            System.out.println("EL numero "+i+" = "+numeros[i]);
+        }
+        
+    }
+    // Demostración Argumentos Variables en Java
+
     
 }
