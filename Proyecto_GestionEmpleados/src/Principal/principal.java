@@ -49,7 +49,9 @@ public class principal {
     
     
     public static void matriz_de_personas(){
-    
+        
+        
+    Integer numeros[]={12,2,43};
        
         Persona e1 = new Empleado("Loken","swift");
         Persona e2 = new Empleado("LUIS","morado");
@@ -75,12 +77,20 @@ public class principal {
             }
                 
         }
-       
+        //llamamos al metodo imprimir para imprimir tanto mi lista de empleados como la de los numeros
+        System.out.println("imprimiendo numero");
+        imprimir(numeros);
+        System.out.println("imprimiendo empleados");
+        imprimir(empleado);
         
         
         
-        
-        
+    }
+    
+    public static void imprimir(Object lista[]){
+        for (int i = 0; i < lista.length; i++) {
+            System.out.println("lista"+i+" = "+lista[i]);
+        }
     }
     
 }
