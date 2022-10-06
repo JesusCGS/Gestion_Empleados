@@ -6,6 +6,7 @@
 package Principal;
 
 import Domino.Empleado;
+import Domino.Gerente;
 import Domino.Persona;
 
 /**
@@ -48,6 +49,8 @@ public class principal {
         imprimir_metodo_variable(1,2,3);
         System.out.println("segunda llamada");
         imprimir_metodo_variable(253,1);
+        
+        imprimir_todo_jesus();
         
         
         
@@ -94,11 +97,13 @@ public class principal {
     }
     
     public static void imprimir(Object lista[]){
+        System.out.println("imprimir");
         for (int i = 0; i < lista.length; i++) {
             System.out.println("lista"+i+" = "+lista[i]);
         }
     }
     public static void imprimir_metodo_variable(int...numeros){
+        System.out.println("imprimir_metodo_variable");
         for (int i = 0; i < numeros.length; i++) {
             System.out.println("EL numero "+i+" = "+numeros[i]);
         }
@@ -106,5 +111,74 @@ public class principal {
     }
     // Demostración Argumentos Variables en Java
 
+    //ejercicio de imprimir todo
     
+   public static void imprimir_todo_jesus(){
+       
+       
+       
+       Persona p1 = new Persona  ("GONZAÑO ","MORAÑO  ");
+       Persona p2 = new Persona  ("LUIS    ","MORADO  ");
+       Empleado e3 = new Empleado("NIKO    ","BELTREKE",33,32.5){};
+       Empleado e4 = new Empleado("JOSE    ","LUIS    ",34,1132.5){};
+       Gerente g5 = new Gerente  ("SERGIO  ","MALLOR  ",5,5,65,2093.65){};
+       Gerente g6 = new Gerente  ("SANTIAGO","LOREIN  ",6,6,66,2189.05){};
+       
+       System.out.println("santi metodo detalles");
+        mostrarDetallesSanti(g6);
+
+       
+      /* Persona matriz[][]=new Persona [3][2];
+        matriz[0][0]=p1;
+        matriz[0][1]=p2;
+        matriz[1][0]=e3;
+        matriz[1][1]=e4;
+        matriz[2][0]=g5;
+        matriz[2][1]=g5;
+  
+        //visualizar la tabla
+        for(int i=0;i<matriz.length;i++){
+            for(int j=0;j<5;j++){
+                System.out.print("\t"+matriz[i][j]);
+            }
+            System.out.println("");
+        }
+    
+        /*
+         for (int i = 0; i < matriz.length; i++) {
+            if (i==0) System.out.println("socios: ");
+            else  System.out.println("Directores: ");
+            for (int j = 0; j < matriz[i].length; j++) {
+                System.out.println(matriz[i][j]);
+            }
+                
+        }*/
+       
+   }
+   
+   public static void mostrarDetallesSanti(Persona persona){
+       //OBJETOS
+       Persona p1 = new Persona  ("GONZAÑO ","MORAÑO  ");
+       Persona p2 = new Persona  ("LUIS    ","MORADO  ");
+       Empleado e3 = new Empleado("NIKO    ","BELTREKE",33,32.5){};
+       Empleado e4 = new Empleado("JOSE    ","LUIS    ",34,1132.5){};
+       Gerente g5 = new Gerente  ("SERGIO  ","MALLOR  ",5,5,655,2093.65){};
+       Gerente g6 = new Gerente  ("SANTIAGO","LOREIN  ",6,6,666,2189.05){};
+       
+       
+       //METODO
+       if(persona instanceof Persona){
+           System.out.println("ES UN PERSONA");
+           
+       }
+       if(persona instanceof Empleado){
+           System.out.println("ES UN EMPLEADO");
+           System.out.println(((Empleado)persona).getNumss());
+       }
+       if(persona instanceof Gerente){
+           System.out.println("ES UN GERENTE");
+           System.out.println(((Gerente)persona).getDepartamento());
+       }
+       
+   }
 }

@@ -21,12 +21,24 @@ public class Empleado extends Persona{
         System.out.println("imprimiendo desde la clase padre ...");
     }*/
 
-    public Empleado(int numss, double salario, String nombre, String apellido) {
+    public Empleado( String nombre, String apellido,int numss, double salario) {
         super(nombre, apellido);
         this.numss = numss;
         this.salario = salario;
     }
 
+    public int getNumss() {
+        return numss;
+    }
+    
+    
+    //toString
+
+    @Override
+    public String toString() {
+        return "Empleado{"+super.toString() + "numss=" + numss + ", salario=" + salario + '}';
+    }
+    
     
     
     

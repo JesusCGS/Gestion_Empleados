@@ -11,14 +11,26 @@ package Domino;
  */
 public  class Gerente extends Empleado  {
    private int departamento;
-   private int estudios;
+   private int N_estudios;
 //constructor
 
-    public Gerente(int departamento, int estudios, int numss, double salario, String nombre, String apellido) {
-        super(numss, salario, nombre, apellido);
+    public Gerente( String nombre, String apellido,int departamento, int N_estudios, int numss, double salario) {
+        super(nombre, apellido,numss, salario);
         this.departamento = departamento;
-        this.estudios = estudios;
+        this.N_estudios = N_estudios;
     }
+
+    public int getDepartamento() {
+        return departamento;
+    }
+    
+    //toString
+
+    @Override
+    public String toString() {
+        return "Gerente{"+super.toString() + "departamento=" + departamento + ", N_estudios=" + N_estudios + '}';
+    }
+    
     
 
    
