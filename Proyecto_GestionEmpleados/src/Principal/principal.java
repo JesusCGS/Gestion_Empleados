@@ -8,6 +8,9 @@ package Principal;
 import Domino.Empleado;
 import Domino.Gerente;
 import Domino.Persona;
+import com.empresa.accesoadatos.IAccesoDatos;
+import com.empresa.accesoadatos.ImpMongo;
+import com.empresa.accesoadatos.ImplementacionMYSQL;
 
 /**
  *
@@ -126,7 +129,16 @@ public class principal {
        
        System.out.println("santi metodo detalles");
         mostrarDetallesSanti(g6);
-
+         //instando de la interfaz con la impl de mongo
+        IAccesoDatos datosMong = new ImpMongo();
+         //instando de la interfaz con la impl de mysql
+        IAccesoDatos datosMYSQL = new ImplementacionMYSQL();
+       
+        datosMong.listar();
+                
+        datosMYSQL.listar();
+        
+        imprimirDatos(datosMong);
        
       /* Persona matriz[][]=new Persona [3][2];
         matriz[0][0]=p1;
@@ -180,5 +192,8 @@ public class principal {
            System.out.println(((Gerente)persona).getDepartamento());
        }
        
+   }
+   public static void imprimirDatos(IAccesoDatos datos){
+       datos.listar();
    }
 }

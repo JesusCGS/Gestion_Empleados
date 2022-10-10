@@ -6,12 +6,13 @@
 package Domino;
 
 import Principal.principal;
+import java.io.Serializable;
 
 /**
  *
  * crear una clase  hija = empleado, numero ss y que tenga un metodo imprimir pot pantalla
  */
-public  class Persona  {
+public  class Persona implements Serializable  {
     private String nombre,apellido;
     private int idpersona;
     //contador de persona
@@ -55,15 +56,46 @@ public  class Persona  {
 
 //contructores
     public Persona(String nombre, String apellido) {
-        this();
+        //this();
+        this.idpersona = ++Persona.contadorpersona;
         this.nombre = nombre;
         this.apellido = apellido;
     }
 
     public Persona() {
-        this.idpersona = ++Persona.contadorpersona;
+        //this.idpersona = ++Persona.contadorpersona;
         
     }
+ //equals hascode
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 97 * hash + this.idpersona;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Persona other = (Persona) obj;
+        if (this.idpersona != other.idpersona) {
+            return false;
+        }
+        return true;
+    }
+    
+    
+    
+    
 //toString
 
     @Override
